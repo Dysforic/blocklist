@@ -1,14 +1,16 @@
 # blocklist
 Greetings to Robin-Sch / blocklist 
 
-Primero has de ejecutar ./select.sh para elegir dentro del whiptail los repositorios que deseas copiar
-dentro del $input = ./lists.txt que será utilizado en el ./generate.sh que simplemente se trata de un while
-haciendo curl's a los repositorios que están en el lists.txt generado anteriormente.
+First of all you have to execute ./select.sh to select inside the whiptail the type of repositories you want to block,
+inside of $input = ./lists.txt which be used in ./generate.sh that it is simply a while doing curl's to the repositories that are in the lists.txt generated above.
 
-Para luego hacer un volcado dentro de un archvio temporal ( $TEMPFILE = dumpfile ) el cual posteriormente será depurado y volcado ( $output = ./hosts.txt ) para evitar
-repeticiones de dominios. Y evitar hacer el archivo mñas pesado de lo necesario. Y al final aparecerá el recuento de los nombres de dominios introducidos dentró del archivo.
+To later make a dump into a temporary file ( $TEMPFILE = dumpfile ) which will later be purified and dumped ( $output = ./hosts.txt ) to avoid domain repetitions. And avoid making the file heavier than necessary. And at the end the count of the domain names entered into the file will appear.
 
-Acúerdate de que te puede dar problemas de permisos por lo tanto:
+Remember that it can give you permissions problems therefore:
 
   ~/sudo chmod 744 select.sh
   ~/sudo chmod 744 generate.sh
+
+A page that has helped me add even more lists:
+
+  - https://sefinek.net/pihole-blocklist-customization
